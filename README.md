@@ -9,7 +9,7 @@
 
 > **Status**: Pre-Beta - Active Development
 
-## 🎯 Overview
+## Overview
 
 KCIT Job Board is an open-source, self-hosted job board and applicant tracking system designed for organizations that need a professional hiring platform integrated directly into their website. Built with Django REST Framework and React, it offers enterprise-grade features with the flexibility of open source.
 
@@ -24,7 +24,7 @@ KCIT Job Board is an open-source, self-hosted job board and applicant tracking s
 ✅ **Email Notifications** - Automated alerts for new applications  
 ✅ **Mobile Responsive** - Works perfectly on all devices  
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -52,7 +52,7 @@ Your job board will be available at:
 
 Default admin credentials: `admin` / `admin123` (change immediately!)
 
-## 📖 Documentation
+## Documentation
 
 - [Installation Guide](docs/INSTALL.md) - Detailed setup instructions
 - [Configuration Guide](docs/CONFIG.md) - Customize branding, emails, and settings
@@ -60,7 +60,7 @@ Default admin credentials: `admin` / `admin123` (change immediately!)
 - [HR User Guide](docs/HR_GUIDE.md) - Non-technical guide for HR teams
 - [API Documentation](docs/API.md) - REST API reference
 
-## 🎨 Customization
+## Customization
 
 KCIT Job Board is designed to match your organization's branding:
 
@@ -72,7 +72,7 @@ KCIT Job Board is designed to match your organization's branding:
 
 See [Configuration Guide](docs/CONFIG.md) for details.
 
-## 🏢 Use Cases
+## Use Cases
 
 ### For HR Teams
 - Post job openings without technical assistance
@@ -92,7 +92,7 @@ See [Configuration Guide](docs/CONFIG.md) for details.
 - Customizable - adapt to your specific hiring workflow
 - Cost-effective - no per-user or per-job fees
 
-## 🛣️ Roadmap
+## Roadmap
 
 See [ROADMAP.md](ROADMAP.md) for our development plans, including:
 
@@ -104,17 +104,19 @@ See [ROADMAP.md](ROADMAP.md) for our development plans, including:
 - **Analytics Dashboard** - Hiring metrics and insights
 - **Package Installer** - One-click deployment for non-technical users
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-Built with love for organizations that value:
+Thanks again to the team at Silver Square for the excellent work https://www.sevensquaretech.com/build-job-portal-website-django-source-code 
+
+Built for organizations that value:
 - Ownership of their data
 - Flexibility in their tools
 - Transparency in their hiring process
