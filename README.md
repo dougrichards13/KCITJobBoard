@@ -3,6 +3,7 @@
 **A modern, collaborative hiring platform for organizations of all sizes**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Powered by KCIT Consulting](https://img.shields.io/badge/Powered%20by-KCIT%20Consulting-blue)](https://kcitconsulting.com)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Django 5.0](https://img.shields.io/badge/django-5.0-green.svg)](https://www.djangoproject.com/)
 [![React 18](https://img.shields.io/badge/react-18-blue.svg)](https://reactjs.org/)
@@ -101,9 +102,39 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🏢 Professional Services
 
-Thanks again to the team at Silver Square for the excellent work https://www.sevensquaretech.com/build-job-portal-website-django-source-code 
+Need help implementing KCIT Job Board for your organization?
+
+**KCIT Consulting** provides:
+- Custom implementation and integration
+- Compliance configuration (SOC 2, GDPR, EEOC)
+- SSO setup and testing (Azure AD, Google, Okta)
+- Custom feature development
+- Training and support
+
+📧 Contact: consulting@kcitconsulting.com  
+🌐 Website: https://kcitconsulting.com
+
+---
+
+### ✨ Smart Factory Forms™
+
+**Coming Soon**: Advanced conversational setup wizard
+
+Imagine setting up your job board through a simple conversation:
+- 10-minute guided setup (vs. 4 hours manual)
+- SSO configuration wizards for major providers
+- Automated compliance framework setup
+- Generates production-ready deployment package
+- Available as premium add-on
+
+🚀 Early access: https://smartfactoryforms.com  
+📦 Enterprise licensing available
+
+---
+
+## Acknowledgments
 
 Built for organizations that value:
 - Ownership of their data
@@ -119,4 +150,5 @@ Built for organizations that value:
 
 ---
 
-**Made with ❤️ for better hiring experiences**
+**Developed by KCIT Consulting** | **Smart Factory Forms™ technology by Smart Factory**  
+*Made with ❤️ for better hiring experiences*
