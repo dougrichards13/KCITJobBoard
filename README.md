@@ -26,39 +26,28 @@ KCIT Job Board is an open-source, self-hosted job board and applicant tracking s
 
 ## Quick Start
 
-### Prerequisites
+**Get up and running in 5 minutes!**
 
-- Python 3.10 or higher
-- Node.js 18 or higher
-- PostgreSQL (recommended for production) or SQLite (development)
-
-### Installation
-
+With Docker:
 ```bash
-# Clone the repository
 git clone https://github.com/dougrichards13/KCITJobBoard.git
 cd KCITJobBoard
-
-# Run setup script (see INSTALL.md for details)
-./setup.sh
-
-# Start the application
-docker-compose up
+docker-compose up -d
 ```
 
 Your job board will be available at:
 - **Careers Page**: http://localhost:3000/careers
-- **Admin Portal**: http://localhost:8001/admin
+- **Admin Portal**: http://localhost:8001/admin (admin / admin123)
 
-Default admin credentials: `admin` / `admin123` (change immediately!)
+📚 **See [QUICKSTART.md](QUICKSTART.md) for detailed installation options, first steps, and troubleshooting.**
 
 ## Documentation
 
-- [Installation Guide](docs/INSTALL.md) - Detailed setup instructions
-- [Configuration Guide](docs/CONFIG.md) - Customize branding, emails, and settings
-- [Deployment Guide](docs/DEPLOY.md) - Production deployment strategies
-- [HR User Guide](docs/HR_GUIDE.md) - Non-technical guide for HR teams
-- [API Documentation](docs/API.md) - REST API reference
+- **[Quick Start Guide](QUICKSTART.md)** ⚡ - Get running in 5 minutes
+- [Configuration Guide](docs/CONFIG.md) - Customize branding, emails, and settings (coming soon)
+- [Deployment Guide](docs/DEPLOY.md) - Production deployment strategies (coming soon)
+- [HR User Guide](docs/HR_GUIDE.md) - Non-technical guide for HR teams (coming soon)
+- [API Documentation](docs/API.md) - REST API reference (coming soon)
 
 ## Customization
 
