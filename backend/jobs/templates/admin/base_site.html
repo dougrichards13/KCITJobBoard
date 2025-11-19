@@ -1,0 +1,250 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | CFA Careers Admin{% endblock %}
+
+{% block branding %}
+<div id="site-name">
+    <a href="{% url 'admin:index' %}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+        <span style="font-size: 24px; font-weight: 600; color: #4F7942;">CFA</span>
+        <span style="font-size: 16px; color: #495464;">Careers</span>
+    </a>
+</div>
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    /* CFAFS Brand Colors */
+    :root {
+        --cfa-green: #4F7942;
+        --cfa-green-dark: #3d5f35;
+        --cfa-blue: #5CA4EA;
+        --cfa-gold: #FFC857;
+        --cfa-gold-dark: #d4a847;
+        --cfa-light: #F7F7F2;
+        --cfa-dark: #2d3436; /* Darker for better readability */
+        --cfa-text: #333333; /* High contrast text */
+    }
+    
+    /* Header styling with white text for contrast */
+    #header {
+        background: linear-gradient(135deg, var(--cfa-green) 0%, var(--cfa-green-dark) 100%);
+        color: white !important;
+    }
+    
+    #branding h1, #branding h1 a:link, #branding h1 a:visited {
+        color: white !important;
+        font-weight: 400;
+    }
+    
+    /* User tools - white text on green header */
+    #user-tools a:link, #user-tools a:visited {
+        color: white !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    #user-tools a:hover {
+        color: var(--cfa-gold) !important;
+        border-bottom-color: var(--cfa-gold);
+    }
+    
+    /* Breadcrumbs with proper contrast */
+    div.breadcrumbs {
+        background: var(--cfa-light);
+        color: var(--cfa-text) !important;
+        font-weight: 500;
+    }
+    
+    div.breadcrumbs a {
+        color: var(--cfa-green) !important;
+    }
+    
+    div.breadcrumbs a:hover {
+        color: var(--cfa-green-dark) !important;
+    }
+    
+    /* Body links with good contrast */
+    a:link, a:visited {
+        color: var(--cfa-green) !important;
+        font-weight: 500;
+    }
+    
+    a:hover, a:focus {
+        color: var(--cfa-green-dark) !important;
+        text-decoration: underline;
+    }
+    
+    /* Buttons with proper contrast */
+    .submit-row input[type="submit"],
+    .button, input[type="submit"], input[type="button"], .submit-row input, button {
+        background: var(--cfa-green) !important;
+        color: white !important;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-weight: 500;
+    }
+    
+    .submit-row input[type="submit"]:hover,
+    .button:hover, input[type="submit"]:hover {
+        background: var(--cfa-green-dark) !important;
+    }
+    
+    .button.default, input[type="submit"].default, .submit-row input.default {
+        background: var(--cfa-gold) !important;
+        color: var(--cfa-dark) !important;
+        font-weight: 600;
+    }
+    
+    .button.default:hover, input[type="submit"].default:hover {
+        background: var(--cfa-gold-dark) !important;
+    }
+    
+    /* Module headers with readable text */
+    .module h2, .module caption, .inline-group h2 {
+        background: var(--cfa-green) !important;
+        color: white !important;
+        font-weight: 600;
+        padding: 10px 15px;
+    }
+    
+    /* Table headers */
+    thead th {
+        background: var(--cfa-light) !important;
+        color: var(--cfa-text) !important;
+        font-weight: 700;
+    }
+    
+    /* Table cells */
+    tbody td {
+        color: var(--cfa-text) !important;
+    }
+    
+    /* Selected items */
+    .selected, tr.selected {
+        background-color: #e8f5e9 !important;
+    }
+    
+    /* Row hover */
+    tbody tr:hover {
+        background-color: var(--cfa-light) !important;
+    }
+    
+    /* Django admin typography */
+    #site-name a {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 400;
+    }
+    
+    body {
+        font-family: 'Lato', Arial, sans-serif;
+        color: var(--cfa-text) !important;
+    }
+    
+    h1, h2, h3, h4, h5 {
+        color: var(--cfa-text) !important;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: 600;
+    }
+    
+    /* All body text - improved readability */
+    p, td, th, li, span, div {
+        color: var(--cfa-text) !important;
+    }
+    
+    /* Action bar */
+    .actions {
+        background: var(--cfa-light) !important;
+        border: 1px solid #ddd;
+    }
+    
+    .actions label {
+        color: var(--cfa-text) !important;
+        font-weight: 600;
+    }
+    
+    .actions select {
+        color: var(--cfa-text) !important;
+        font-weight: 500;
+    }
+    
+    /* Fieldsets */
+    fieldset.module {
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        background: white;
+    }
+    
+    /* Form labels - high contrast */
+    label, .form-row label {
+        color: var(--cfa-text) !important;
+        font-weight: 600;
+    }
+    
+    /* Help text */
+    .help, p.help, .helptext {
+        color: #666 !important;
+    }
+    
+    /* Footer */
+    #footer {
+        color: var(--cfa-dark);
+        padding: 20px;
+        text-align: center;
+        background: var(--cfa-light);
+        border-top: 2px solid var(--cfa-green);
+    }
+    
+    /* Dashboard modules */
+    .module {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+    }
+    
+    /* Make sure all text is readable */
+    th a:link, th a:visited {
+        color: var(--cfa-text) !important;
+        font-weight: 600;
+    }
+    
+    /* Change list text */
+    .change-list tbody td a {
+        color: var(--cfa-green) !important;
+        font-weight: 600;
+    }
+    
+    /* Improve readability of all admin text */
+    .object-tools a {
+        background: var(--cfa-green) !important;
+        color: white !important;
+        font-weight: 600;
+    }
+    
+    /* Dashboard text */
+    #content h1 {
+        color: var(--cfa-text) !important;
+        font-weight: 700;
+    }
+    
+    /* Form field values */
+    input[type="text"], input[type="password"], input[type="email"], 
+    input[type="number"], textarea, select {
+        color: var(--cfa-text) !important;
+        font-weight: 500;
+    }
+</style>
+{% endblock %}
+
+{% block footer %}
+<div id="footer">
+    <p style="margin: 0; color: var(--cfa-dark);">
+        <strong>Cooperative Finance Association</strong> | Serving agricultural finance since 1943
+    </p>
+    <p style="margin: 5px 0 0 0; font-size: 12px; color: #999;">
+        Careers Management System
+    </p>
+</div>
+{% endblock %}
